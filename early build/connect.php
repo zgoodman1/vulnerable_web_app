@@ -1,4 +1,5 @@
 <?php
+header("Location: home.html");
 $username = filter_input(INPUT_POST, 'username');
 $email = filter_input(INPUT_POST, 'email');
 $password = filter_input(INPUT_POST, 'password'); 
