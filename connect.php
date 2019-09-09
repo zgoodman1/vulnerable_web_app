@@ -16,11 +16,11 @@ if(!empty($username)){
                 $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
 
                 if(mysqli_connect_error()){
-                    die('Connect Error ('. mysqli_connect_errno() .')'. mysqli_connect_error();
+                    die('Connect Error ('. mysqli_connect_errno() .')'. mysqli_connect_error());
                 }
                 else{
-                    $sql = "INSERT INTO bank_app_info (user_id, user_email, user_pw, user_cc_num)
-                    values = ('$username', '$email', '$password", '$cc_num')";
+                    $sql = "INSERT INTO bank_app_info_2 (user_id, user_email, user_pw, user_cc_num)
+                    values = ('$username', '$email', '$password', '$cc_num')";
                     if($conn->query($sql)){
                         echo "New user registered successfully";
                     }
