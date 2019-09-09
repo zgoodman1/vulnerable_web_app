@@ -10,8 +10,8 @@ if(!empty($username)){
             if(!empty($cc_num)){
                 $host = "localhost";
                 $dbusername = "root";
-                $dpasssword = "";
-                $dbname = "test";
+                $dbpassword = "";
+                $dbname = "test_db";
 
                 $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
 
@@ -20,7 +20,7 @@ if(!empty($username)){
                 }
                 else{
                     $sql = "INSERT INTO bank_app_info_2 (user_id, user_email, user_pw, user_cc_num)
-                    values = ('$username', '$email', '$password', '$cc_num')";
+                    VALUES ('$username', '$email', '$password', '$cc_num')";
                     if($conn->query($sql)){
                         echo "New user registered successfully";
                     }
