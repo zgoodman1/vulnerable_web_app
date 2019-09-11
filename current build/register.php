@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <title>Registration</title>
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css"
+        href="styles.css">
     </head>
     <body>
         <?php
@@ -31,16 +33,18 @@
             } 
             }else {
                 ?>
-                <div class="form">
-                    <h1>Registration</h1>
-                    <form name="registration" action="" method="post">
-                        <input type="text" name="username" placeholder="Username" required />
-                        <input type="email" name="email" placeholder="Email" requried />
-                        <input type="password" name="password" placeholder="Password" requried />
-                        <input type="text" name="cc_num" placeholder="Credit Card Number (NOT A REAL ONE)" required/>
-                        <input type="submit" name="submit" placeholder="Register" />
-                    </form>
-                </div>
+                <div class="form-container">
+            <div class="user-img"></div>
+            <h3>Registration</h3>
+            <ul class="list" method="post">
+                <li><input type="text" name="username" placeholder="Username"></li>
+                <li><input type="email" name="email" placeholder="Email"></li>
+                <li><input type="password" name="password" placeholder="Password" class="form-control"></li>
+                <li><input type="number" name="cc_num" class="form-control" placeholder="Card Number"></li>
+                <li><input type="button" class="btn btn-primary" value="Submit"></li>
+                <li><input type="button" class="btn btn-default" value="Reset" style="background-color: red;"></li>
+            </ul>
+        </div>   
             <?php } ?>
             </body>
             </html>
