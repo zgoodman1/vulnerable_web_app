@@ -3,7 +3,7 @@
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
-define('DB_NAME', 'bank_app_info_2');
+define('DB_NAME', 'test_db');
 
 // try to connect
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
