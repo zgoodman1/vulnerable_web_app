@@ -45,6 +45,9 @@
                 <li><input type="submit" class="btn btn-primary" value="Submit"></li>
             </ul>
             </form>
+            <div class='form'>
+                Already have an account? <a href='login.php'> Login here</a>
+            </div>
         </div>   
             <?php } ?>
             </body>

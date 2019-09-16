@@ -3,6 +3,8 @@
         <meta charset="utf-8">
         <title>Login</title>
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css"
+        href="styles.css">
     </head>
 <body>
     <?php
@@ -15,7 +17,7 @@
         $password = stripslashes($_REQUEST['password']);
         $password = mysqli_real_escape_string($link, $password);
         $query = "SELECT * FROM `bank_app_info_2` WHERE user_id = '$username' and 
-        user_pw = '".md5($password)."'";
+        user_pw = '$password'";
         $result = mysqli_query($link, $query) or die(mysqli_error());
         $rows = mysqli_num_rows($result);
         if($rows == 1){

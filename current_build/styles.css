@@ -10,6 +10,15 @@ body {
     background-image: radial-gradient(#e87722, #ea8031);
 }
 
+form {
+    width: 310px;
+    height: auto;
+    padding: 40px 30px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+
 .form-container {
     width: 310px;
     height: auto;
@@ -19,6 +28,7 @@ body {
     box-shadow: 0 0 10px 0 #000;
     margin: auto;
     position: relative;
+    text-align: center;
 }
 
 .user-img {
@@ -58,4 +68,5 @@ ul.list li input[type="submit"] {
 h3 {
     margin-top: 0px;
     margin-bottom: 20px;
+    position: relative;
 }
