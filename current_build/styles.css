@@ -50,7 +50,7 @@ ul.list li input {
     border-radius: 5px;
 }
 
-ul.list li input[type="button"] {
+ul.list li input[type="submit"] {
     background-color: #4690fb;
     color: #fff;
 }

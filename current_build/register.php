@@ -36,14 +36,15 @@
                 <div class="form-container">
             <div class="user-img"></div>
             <h3>Registration</h3>
-            <ul class="list" method="post">
+            <form method="post">
+            <ul class="list">
                 <li><input type="text" name="username" placeholder="Username"></li>
                 <li><input type="email" name="email" placeholder="Email"></li>
                 <li><input type="password" name="password" placeholder="Password" class="form-control"></li>
                 <li><input type="number" name="cc_num" class="form-control" placeholder="Card Number"></li>
-                <li><input type="button" class="btn btn-primary" value="Submit"></li>
-                <li><input type="button" class="btn btn-default" value="Reset" style="background-color: red;"></li>
+                <li><input type="submit" class="btn btn-primary" value="Submit"></li>
             </ul>
+            </form>
         </div>   
             <?php } ?>
             </body>
