@@ -16,7 +16,7 @@
             $currUsername = $_SESSION['username'];
             // echo $currUsername;
             $sql = "UPDATE bank_app_info_2 SET user_balance=$amt+user_balance WHERE 
-            user_id = $currUsername";
+            user_id = '$currUsername'";
             // echo mysqli_query($link, $sql);
             if(mysqli_query($link, $sql)){
                 echo "Your deposit was processed successfully<br>";

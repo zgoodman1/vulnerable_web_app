@@ -14,17 +14,17 @@
      
          $currUsername = $_SESSION['username'];
      
-     
          echo "Welcome, " . $currUsername . "</br>";
         ?>
     </h1>
     <h2>
         <?php 
         $currUsername = $_SESSION['username'];
-        $sql = "SELECT 'user_balance' FROM bank_app_info_2 WHERE user_id == $currUsername";
+        $sql = "SELECT user_balance FROM bank_app_info_2 WHERE user_id = '$currUsername'";
         $balance = $link->query($sql);
-    
-        echo "</br>Balance: " . $balance . "</br>";
+        if($row = $balance->fetch_assoc()){
+            echo "</br>Balance: " . $row['user_balance'] . "</br>";
+        }
         ?>
     </h2>
     
@@ -34,6 +34,12 @@
         <br/>Click here to <a href='deposit.php'>Make a Deposit</a></div>";
         ?>
     </h3>
+    
+    <h4>
+        <?php
+        echo "<div class='form'>
+        <br/>Click here to <a href='logout.php'>Log Out</a></div>";
+        ?>
 </body>
 </html>
     
