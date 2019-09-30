@@ -5,14 +5,11 @@
     <title>Deposit</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <body>
-
     <header>
             <a href='index.php'><button type='button'>Home</button></a></li>
             <a href='home.php'><button type='button'>Account Home</button></a></li>
     </header>
-
     <!--
         <form action='up_bal.php' method='get'>
             <-- using get method as it will display everything in 
@@ -31,7 +28,5 @@
             <input type="submit" value="Deposit">
         </form>
     </div>
-
 </body>
-
 </html>

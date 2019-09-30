@@ -18,9 +18,7 @@
             <?php
             require('config.php');
             session_start();
-
             $currUsername = $_SESSION['username'];
-
             echo "Welcome, " . $currUsername . "</br>";
             ?>
         </h1>
