@@ -24,7 +24,7 @@
             $cc_num = mysqli_real_escape_string($link, $cc_num);
             
             $query = "INSERT into `bank_app_info_2` (user_id, user_email, user_pw, 
-            user_cc_num) VALUES ('$username', '$email', '".md5($password)."', '$cc_num')";
+            user_cc_num) VALUES ('$username', '$email', '$password', '$cc_num')";
             $result = mysqli_query($link, $query);
             if ($result){
                 echo "<div class='form'>
