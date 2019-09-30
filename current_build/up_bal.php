@@ -21,12 +21,12 @@
             if(mysqli_query($link, $sql)){
                 echo "Your deposit was processed successfully<br>";
                 echo "<div class='form'>
-                <a href='index.php'> Return to Home Page</a></div>";
+                <a href='home.php'> Return to Home Page</a></div>";
             } else {
                 echo "There was an error processing your request, 
                 please try again later, Error: " . mysqli_error($link);
                 echo "<div class='form'>
-                <a href='index.php'> Return to Home Page</a></div>";
+                <a href='home.php'> Return to Home Page</a></div>";
             }
             ?>
         </h3>
