@@ -36,7 +36,7 @@
                 <div class="form-container">
             <div class="user-img"></div>
             <h3>Registration</h3>
-            <form method="post">
+            <form method="get">
             <ul class="list">
                 <li><input type="text" name="username" placeholder="Username"></li>
                 <li><input type="email" name="email" placeholder="Email"></li>
