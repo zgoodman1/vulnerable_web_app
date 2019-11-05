@@ -1,14 +1,19 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Index</title>
-        <link rel='stylesheet' href='css/style.css'/>
-        <link rel="stylesheet" type="text/css"
-        href="styles.css">
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 
+<body>
+
+    <header>
+            <a href='index.php'><button type='button'>Home</button></a></li>
+            <a href='home.php'><button type='button'>Account Home</button></a></li>
+    </header>
+
+    <div class="content"></div>
     <h1>Welcome to InfoSec Bank</h1>
     <h2><i>"Where your security is our priority!"</i></h2>
 
@@ -18,7 +23,8 @@
         echo "<p><a href='register.php'>Register Here</a></p>";
         ?>
     </h3>
+    </div>
 
-    </body>
+</body>
 
 </html>
