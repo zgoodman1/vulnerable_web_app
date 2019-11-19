@@ -1,15 +1,10 @@
 <?php
-//initialize session
-require('config.php');
+
+// start and then destory session
 session_start();
-
-//unset all session variables
-$_SESSION = array();
-
-//destroy the session
 session_destroy();
 
 //redirect to index page
 header("location: index.php");
-exit;
+//exit;
 ?>

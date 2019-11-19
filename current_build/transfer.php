@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Deposit</title>
+    <title>Transfer</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -15,29 +15,24 @@
     </header>
 
     <div class="header">
-        Deposit
+        Transfer
     </div>
 
     <form method="post" action="transfer.php">
         <?php include('errors.php'); ?>
         <div class="input-group">
-            <label>Deposit Amount</label>
+            <label>Transfer Amount</label>
             <input type="number" name="amount">
         </div>
         <div class="input-group">
-            <button type="submit" class="btn" name="deposit">Deposit</button>
+            <label>Destination User</label>
+            <input type="text" name="dest">
+        </div>
+        <div class="input-group">
+            <button type="submit" class="btn" name="transfer">Transfer</button>
         </div>
     </form>
 
-    <!--
-    <form action="up_bal.php" method="post" autocomplete="off">
-        <label for="deposit">
-            Deposit Amount:
-            <input type="text" name="deposit" id="deposit">
-        </label>
-        <input type="submit" value="Deposit">
-    </form>
--->
 
 </body>
 

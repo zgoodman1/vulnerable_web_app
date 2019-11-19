@@ -1,22 +1,27 @@
+/*
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #f5683d;
-    padding-top: 30vh;
+    background-color: #b3daff;
+    // padding-top: 30vh;
     text-align: center;
-    background-image: radial-gradient(#e87722, #ea8031);
 }
 
 form {
-    width: 310px;
+    width: 400x;
     height: auto;
-    padding: 40px 30px;
+    padding: 20px 20px;
     margin: auto;
     position: relative;
     text-align: center;
+}
+
+form p {
+    padding: 5px 2px;
 }
 
 .form-container {
@@ -70,3 +75,22 @@ h3 {
     margin-bottom: 20px;
     position: relative;
 }
+
+.content {
+    padding-top: 15vh;
+}
+
+header {
+    text-align: left;
+    padding: 10px;
+    overflow: hidden;
+}
+
+header a {
+    float: left;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+*/
