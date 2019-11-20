@@ -1,4 +1,46 @@
+<?php include('server.php') ?>
+<!DOCTYPE html>
 <html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href='index.php'><button type='button'>Home</button></a></li>
+        <a href='home.php'><button type='button'>Account Home</button></a></li>
+    </header>
+
+    <div class="header">
+        Login
+    </div>
+
+    <form method="post" action="login.php">
+        <?php include('errors.php'); ?>
+        <div class="input-group">
+            <label>Username</label>
+            <input type="text" name="username">
+        </div>
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" name="password">
+        </div>
+        <div class="input-group">
+            <button type="submit" class="btn" name="login_user">Login</button>
+        </div>
+        <p>
+            Not yet a member? <a href="register.php">Sign up</a>
+        </p>
+    </form>
+</body>
+
+</html>
+
+
+<!-- <html>
 
 <head>
     <meta charset="utf-8">
@@ -16,26 +58,29 @@
     <div class="content">
 
         <?php
+        /*
         require('config.php');
         session_start();
+
         if (isset($_POST['username'])) {
-            // $username = stripslashes($_REQUEST['username']);
-            // $username = mysqli_real_escape_string($link, $username);
-            // $password = stripslashes($_REQUEST['password']);
-            // $password = mysqli_real_escape_string($link, $password);
+
             $username = $_POST['username'];
             $password = $_POST['password'];
+
             $query = "SELECT * FROM `bank_app_info_2` WHERE user_id = '$username' and user_pw = '$password'";
             $result = mysqli_query($link, $query) or die(mysqli_error($link));
+
             $rows = mysqli_num_rows($result);
+
             if ($rows == 1) {
-                $_SESSION['username'] = $username;
+                $_SESSION['username'] = $username;      // initialize session with php variable
                 header("Location: home.php");
             } else {
                 echo "<div class='form'>
                 <h3>Username/password is incorrect.</h3>";
             }
         }
+        */
         ?>
 
         <div class="form">
@@ -52,4 +97,8 @@
 
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html> -->
+>>>>>>> 5469bd7540638d1c76ec151d7c1d8fb600986999
