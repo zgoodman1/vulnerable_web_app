@@ -7,7 +7,7 @@ $email    = "";
 $errors = array();
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'bank_db');
+$db = mysqli_connect('localhost', 'root', '', 'test');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {                // register button submitted
@@ -101,7 +101,7 @@ if (isset($_POST['login_user'])) {
     
         $user = $db->query("SELECT * FROM users WHERE username = '$username' && password = '$password'");
 
-        if ($user->num_rows > 0) {
+        if (!empty($user) && $user->num_rows > 0) {
             while ($row = $user->fetch_assoc()) {
                 echo "id: " . $row["id"] . " - username: " . $row["username"] . " - password: " . $row["password"] . "<br>";
                 $_SESSION['username'] = $username;

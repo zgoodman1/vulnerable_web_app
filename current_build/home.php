@@ -86,28 +86,22 @@ if (isset($_GET['logout'])) {
 
 <!--
 <html>
-
 <head>
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <body>
-
     <header>
         <a href='index.php'><button type='button'>Home</button></a></li>
         <a href='home.php'><button type='button'>Account Home</button></a></li>
     </header>
-
     <div class="content">
         <h1>
             <?php
             /*
             require('config.php');
             session_start();
-
             $currUsername = $_SESSION['username'];
-
             echo "Welcome, " . $currUsername . "</br>";
             */
             ?>
@@ -124,7 +118,6 @@ if (isset($_GET['logout'])) {
             */
             ?>
         </h2>
-
         <h3>
             <?php
             /*
@@ -134,7 +127,6 @@ if (isset($_GET['logout'])) {
             ?>
         
         </h3>
-
         <h4>
             <?php
             /*
@@ -144,8 +136,6 @@ if (isset($_GET['logout'])) {
             ?>
         </h4>
     </div>
-
 </body>
-
 </html>
         -->

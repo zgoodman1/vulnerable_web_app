@@ -40,15 +40,11 @@
         // require('config.php');
         // session_start();
         $deposit = $_POST['deposit'];
-
         // echo $deposit;
-
         $currUsername = $_SESSION['username'];
         // echo $currUsername;
         $sql = "UPDATE users SET balance = '{$deposit}' + balance WHERE username = '$currUsername'";
-
         // echo mysqli_query($link, $sql);
-
         if (mysqli_query($db, $sql)) {
             echo "Your deposit was processed successfully<br>";
             echo $deposit . " Deposited";

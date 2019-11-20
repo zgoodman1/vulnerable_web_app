@@ -27,7 +27,6 @@
     <div class="form"></div>
     <h1>Welcome to InfoSec Bank</h1>
     <h2><i>"Where your security is our priority!"</i></h2>
-
     <h3>
         <?php
         /*

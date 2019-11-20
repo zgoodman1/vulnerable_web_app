@@ -41,37 +41,27 @@
 
 
 <!-- <html>
-
 <head>
     <meta charset="utf-8">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <body>
-
     <header>
         <a href='index.php'><button type='button'>Home</button></a></li>
         <a href='home.php'><button type='button'>Account Home</button></a></li>
     </header>
-
     <div class="content">
-
         <?php
         /*
         require('config.php');
         session_start();
-
         if (isset($_POST['username'])) {
-
             $username = $_POST['username'];
             $password = $_POST['password'];
-
             $query = "SELECT * FROM `bank_app_info_2` WHERE user_id = '$username' and user_pw = '$password'";
             $result = mysqli_query($link, $query) or die(mysqli_error($link));
-
             $rows = mysqli_num_rows($result);
-
             if ($rows == 1) {
                 $_SESSION['username'] = $username;      // initialize session with php variable
                 header("Location: home.php");
@@ -82,7 +72,6 @@
         }
         */
         ?>
-
         <div class="form">
             <h1> Login Form</h1>
             <form action="" method="post" name="login">
@@ -92,13 +81,6 @@
             </form>
             <p>Not registered yet? <a href='register.php'>Register Here</a></p>
         </div>
-
     </div>
-
 </body>
-
-<<<<<<< HEAD
-</html>
-=======
 </html> -->
->>>>>>> 5469bd7540638d1c76ec151d7c1d8fb600986999
