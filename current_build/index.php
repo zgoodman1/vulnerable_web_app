@@ -1,7 +1,7 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
     <title>Index</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -9,7 +9,7 @@
 <body>
 
     <header>
-        <a href='index.php'><button type='button'>Main</button></a></li>    
+        <a href='index.php'><button type='button'>Main</button></a></li>
         <a href='home.php'><button type='button'>Home</button></a></li>
     </header>
 
