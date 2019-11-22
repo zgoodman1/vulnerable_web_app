@@ -70,14 +70,11 @@ if (isset($_GET['logout'])) {
             }
             ?>
         </h2>
-
         <h3>
                 <br />Click here to <a href='deposit.php'>Make a Deposit</a>
                 <br />Click here to <a href='transfer.php'>Make a Transfer</a>
         </h3>
-
     </div>
-
 </body>
 
 </html>
