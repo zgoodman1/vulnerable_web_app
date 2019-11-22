@@ -116,14 +116,16 @@ if (isset($_POST['login_user'])) {
                 $_SESSION['username'] = $username;
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['success'] = "You are now logged in";
+                $_SESSION['usertype'] = $row['user_type'];
 
-                if ($row["user_type"] == 'user') {
-                    header('location: home.php');
-                } else if ($row["user_type"] == 'admin') {
-                    die("Admin home");
+                /*
+                if ($row['user_type'] === 'admin') {
+                    $_SESSION['usertype'] = $row['user_type'];
                 }
+                */
 
-                
+                header('location: home.php');
+
             }
         }
 
