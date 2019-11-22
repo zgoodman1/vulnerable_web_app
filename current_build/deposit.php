@@ -10,8 +10,8 @@
 <body>
 
     <header>
-        <a href='index.php'><button type='button'>Home</button></a></li>
-        <a href='home.php'><button type='button'>Account Home</button></a></li>
+        <a href='index.php'><button type='button'>Main</button></a></li>
+        <a href='home.php'><button type='button'>Home</button></a></li>
     </header>
 
     <div class="header">
@@ -28,16 +28,6 @@
             <button type="submit" class="btn" name="deposit">Deposit</button>
         </div>
     </form>
-
-    <!--
-    <form action="up_bal.php" method="post" autocomplete="off">
-        <label for="deposit">
-            Deposit Amount:
-            <input type="text" name="deposit" id="deposit">
-        </label>
-        <input type="submit" value="Deposit">
-    </form>
--->
 
 </body>
 

@@ -9,9 +9,9 @@
 
 <body>
 
-    <header>
-        <a href='index.php'><button type='button'>Home</button></a></li>
-        <a href='home.php'><button type='button'>Account Home</button></a></li>
+<header>
+        <a href='index.php'><button type='button'>Main</button></a></li>
+        <a href='home.php'><button type='button'>Home</button></a></li>
     </header>
 
     <div class="header">
