@@ -1,7 +1,7 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
     <title>Index</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -9,8 +9,13 @@
 <body>
 
     <header>
+<<<<<<< HEAD
         <a href='index.php'><button type='button'>Main</button></a></li>    
         <a href='home.php'><button type='button'>Home</button></a></li>   
+=======
+        <a href='index.php'><button type='button'>Main</button></a></li>
+        <a href='home.php'><button type='button'>Home</button></a></li>
+>>>>>>> jwfeshuk-master
     </header>
 
     <div class="header">
@@ -23,6 +28,7 @@
         <div class="link"><a href='register.php'>Register Here</a></div>
     </div>
 
+<<<<<<< HEAD
     <!--
     <div class="form"></div>
     <h1>Welcome to InfoSec Bank</h1>
@@ -37,6 +43,8 @@
     </h3>
 -->
 
+=======
+>>>>>>> jwfeshuk-master
 </body>
 
 </html>

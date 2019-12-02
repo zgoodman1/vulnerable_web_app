@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Registration</title>
+    <title>Create User</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -15,10 +15,10 @@
     </header>
 
     <div class="header">
-        Register
+        Create User
     </div>
 
-    <form method="post" action="register.php">
+    <form method="post" action="create_user.php">
         <?php include('errors.php'); ?>
         <div class="input-group">
             <label>Username</label>
@@ -29,6 +29,14 @@
             <input type="email" name="email" value="<?php echo $email; ?>">
         </div>
         <div class="input-group">
+            <label>User type</label>
+            <select name="user_type" id="user_type">
+                <option value=""></option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
+        </div>
+        <div class="input-group">
             <label>Password</label>
             <input type="password" name="password_1">
         </div>
@@ -37,13 +45,10 @@
             <input type="password" name="password_2">
         </div>
         <div class="input-group">
-            <button type="submit" class="btn" name="reg_user">Register</button>
+            <button type="submit" class="btn" name="reg_user">Create User</button>
         </div>
-        <p>
-            Already a member? <a href="login.php">Sign in</a>
-        </p>
-    </form>
 
+    </form>
 </body>
 
 </html>
