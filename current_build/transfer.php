@@ -1,40 +1,39 @@
-<?php include('server.php') ?>
+<?php include('transaction.php') ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Login</title>
+    <title>Transfer</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
 
-<header>
+    <header>
         <a href='index.php'><button type='button'>Main</button></a></li>
         <a href='home.php'><button type='button'>Home</button></a></li>
     </header>
 
     <div class="header">
-        Login
+        Transfer
     </div>
 
-    <form method="post" action="login.php">
+    <form method="post" action="transfer.php">
         <?php include('errors.php'); ?>
         <div class="input-group">
-            <label>Username</label>
-            <input type="text" name="username">
+            <label>Transfer Amount</label>
+            <input type="number" name="amount">
         </div>
         <div class="input-group">
-            <label>Password</label>
-            <input type="password" name="password">
+            <label>Destination User</label>
+            <input type="text" name="dest">
         </div>
         <div class="input-group">
-            <button type="submit" class="btn" name="login_user">Login</button>
+            <button type="submit" class="btn" name="transfer">Transfer</button>
         </div>
-        <p>
-            Not yet a member? <a href="register.php">Sign up</a>
-        </p>
     </form>
+
+
 </body>
 
 </html>

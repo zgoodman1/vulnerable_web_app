@@ -7,13 +7,6 @@ if (!isset($_SESSION['username'])) {
     // array_push($errors, "You must log in first");
     header('location: login.php');
 }
-
-if (isset($_SESSION['usertype'])) {
-    if ($_SESSION['usertype'] === 'admin') {
-        header('location: admin_home.php');
-    }
-}
-
 if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['username']);
@@ -25,7 +18,7 @@ if (isset($_GET['logout'])) {
 <html>
 
 <head>
-    <title>Home</title>
+    <title>Admin Home</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -37,7 +30,7 @@ if (isset($_GET['logout'])) {
     </header>
 
     <div class="header">
-        Home
+        Admin Home
     </div>
 
     <div class="content">
@@ -59,21 +52,11 @@ if (isset($_GET['logout'])) {
             <p> <a href="home.php?logout='1'" style="color: red;">Logout</a> </p>
         <?php endif ?>
 
-        <h2>
-            <?php
-            $username = $_SESSION['username'];
-            $user = $db->query("SELECT * FROM users WHERE username = '$username'");
-            if ($user->num_rows > 0) {
-                while ($row = $user->fetch_assoc()) {
-                    echo "</br>" . $row['username'] . "'s balance: " . $row['balance'] . "</br>";
-                }
-            }
-            ?>
-        </h2>
         <h3>
-                <br />Click here to <a href='deposit.php'>Make a Deposit</a>
-                <br />Click here to <a href='transfer.php'>Make a Transfer</a>
+                <br/><a href="create_user.php"> Create a New User</a>
         </h3>
+
+
     </div>
 </body>
 
