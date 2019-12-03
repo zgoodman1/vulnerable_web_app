@@ -7,7 +7,7 @@ $email    = "";
 $errors = array();
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'test');
+$db = mysqli_connect('localhost', 'root', '', 'bank_db');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {                // register button submitted
@@ -87,6 +87,14 @@ if (isset($_POST['login_user'])) {
     if (empty($password)) {
         array_push($errors, "Password is required");
     }
+
+    $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+    $results = mysqli_query($db, $query);
+
+    if (!empty($username) && !empty($password) && mysqli_num_rows($results) == 0) {
+        array_push($errors, "Username / Password combination not found!");
+    }
+
   
     if (count($errors) == 0) {
         // $password = md5($password);
@@ -116,13 +124,11 @@ if (isset($_POST['login_user'])) {
                 $_SESSION['username'] = $username;
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['success'] = "You are now logged in";
-                $_SESSION['usertype'] = $row['user_type'];
+                // $_SESSION['usertype'] = $row['user_type'];
 
-                /*
                 if ($row['user_type'] === 'admin') {
                     $_SESSION['usertype'] = $row['user_type'];
                 }
-                */
 
                 header('location: home.php');
 

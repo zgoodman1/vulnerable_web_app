@@ -8,11 +8,13 @@ if (!isset($_SESSION['username'])) {
     header('location: login.php');
 }
 
+/*
 if (isset($_SESSION['usertype'])) {
     if ($_SESSION['usertype'] === 'admin') {
         header('location: admin_home.php');
     }
 }
+*/
 
 if (isset($_GET['logout'])) {
     session_destroy();
@@ -59,7 +61,7 @@ if (isset($_GET['logout'])) {
             <p> <a href="home.php?logout='1'" style="color: red;">Logout</a> </p>
         <?php endif ?>
 
-        <h2>
+        <h3>
             <?php
             $username = $_SESSION['username'];
             $user = $db->query("SELECT * FROM users WHERE username = '$username'");
@@ -69,11 +71,27 @@ if (isset($_GET['logout'])) {
                 }
             }
             ?>
-        </h2>
-        <h3>
-                <br />Click here to <a href='deposit.php'>Make a Deposit</a>
-                <br />Click here to <a href='transfer.php'>Make a Transfer</a>
         </h3>
+
+        <h4>
+            <br/>Click here to <a href='deposit.php'>Make a Deposit</a>
+            <br/>Click here to <a href='transfer.php'>Make a Transfer</a>
+        </h4>
+
+        <!-- admin functionality -->
+        <?php if (isset($_SESSION['usertype'])) : ?>
+            <?php if ($_SESSION['usertype'] === 'admin') : ?>
+                <h3>
+                    <br/><p>**** Admin Functions: ****</p>
+                </h3>    
+                <h4>
+                    <br/><a href="create_user.php"> Create a New User</a>
+                </h4>
+            <?php endif ?>
+        <?php endif ?>
+
+
     </div>
 </body>
+
 </html>
