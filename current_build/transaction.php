@@ -50,9 +50,9 @@ if (isset($_POST['transfer'])) {
 }
 // DEPOSIT
 if (isset($_GET['amount'])) { 
-    $amount = $_GET['amount']; ?>
-    <p><?php echo "Please confirm this amount: " . $amount; ?></p>
-<?php }
+    $amount = $_GET['amount'];
+    array_push($transactions, "Please confirm" . $amount);
+}
 
 if (isset($_POST['deposit'])) {
     $username = $_SESSION['username'];

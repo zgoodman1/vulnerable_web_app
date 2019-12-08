@@ -20,6 +20,7 @@
 
     <form method="post" action="confirm.php">
         <?php include('errors.php'); ?>
+        <?php include('transactions.php'); ?>
         <div class="input-group">
             <label>Deposit Amount</label>
             <input type="text" name="amount">
