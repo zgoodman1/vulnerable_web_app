@@ -20,12 +20,14 @@
     <div class="content">
         <?php
 
-        if (isset($_GET['vals']) && !empty($_GET['vals'])) {
-            $transactions = $_GET['vals'];
-            include('transactions.php');
-        }
+        // if (isset($_GET['vals']) && !empty($_GET['vals'])) {
+        //     $transactions = $_GET['vals'];
+        //     include('transactions.php');
+        // }
 
         ?>
+
+        <?php include('transactions.php'); ?>
 
         <div class='link'><a href='home.php'> Return to Home Page</a></div>
 

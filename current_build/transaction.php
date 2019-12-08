@@ -49,9 +49,14 @@ if (isset($_POST['transfer'])) {
     }
 }
 // DEPOSIT
+if (isset($_GET['amount'])) { 
+    $amount = $_GET['amount']; ?>
+    <p><?php echo "Please confirm this amount: " . $amount; ?></p>
+<?php }
+
 if (isset($_POST['deposit'])) {
     $username = $_SESSION['username'];
-    $amount = floatval($_POST['amount']);
+    $amount = $_POST['amount'];
     // $amount = 10;
     // $amount = settype($amount, "float");
     // (gettype($amount));
@@ -63,9 +68,8 @@ if (isset($_POST['deposit'])) {
         if ($db->query($sql) === TRUE) {
             array_push($transactions, "Deposited: " . $amount . " to: " . $username);
         } else {
-            array_push($errors, "Error updating balance: " . $db->error);
+            array_push($errors, "Error updating balance: ". $amount . $db->error);
         }
-        header('location: confirm.php?' . http_build_query($transactions));
     }
 }
 ?>
