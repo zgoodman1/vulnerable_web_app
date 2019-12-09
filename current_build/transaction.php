@@ -67,6 +67,7 @@ if (isset($_POST['deposit'])) {
         $sql = "UPDATE users SET balance = '{$amount}' + balance WHERE username = '$username'";
         if ($db->query($sql) === TRUE) {
             array_push($transactions, "Deposited: " . $amount . " to: " . $username);
+            header('location: confirm.php?' . http_build_query($transactions));
         } else {
             array_push($errors, "Error updating balance: ". $amount . $db->error);
         }
